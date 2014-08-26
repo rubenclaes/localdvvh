@@ -14,8 +14,8 @@
  */
 class SimpleAuthClass {
 
-    private $strUsername = '';
-    private $strPassword = '';
+    private $strUsername;
+    private $strPassword;
     private $intRol;
     private $dbh;
     private $sql;

@@ -12,3 +12,4 @@
             unset($sAcceptEncoding);
         }
         }
+        

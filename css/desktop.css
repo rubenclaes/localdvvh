@@ -1,0 +1,546 @@
+/* 
+    Document   : desktop.css
+    Created on : 24-dec-2011, 13:53:09
+    Author     : Ruben
+    Description:
+    Dit document zorgt voor de basisopmaak voor een Desktop pc.
+*/
+@import url('widgets.css');
+@import url('social.css');
+
+body,html{
+    background: url('../images/main_bg.gif') repeat-x scroll left top #FFF; 
+    margin:0px;
+    padding:0px;
+    width: 100%;
+    height:100%;
+    text-align: left;
+    font: 15px 'Calibri', 'Arial' ,'sans-serif';
+}
+
+/* ---------------------------------------------------
+    Container
+----------------------------------------------------- */
+.logo {
+    font-family: 'Georgia', 'serif';
+	position:relative;
+	padding:0;
+	float:left;
+	width:auto;
+	height:120px;
+	background:#056160;
+	z-index:1001;
+}
+h1 {
+	margin:0;
+	padding:35px 48px 0;
+	font-size:30px;
+	font-weight:normal;
+	line-height:1.2em;
+	text-align:center;
+}
+h1 a, h1 a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+h1 span {
+}
+h1 small {
+	display:block;
+	text-align: center;
+	font-size:14px;
+	line-height:1.2em;
+	letter-spacing:normal;
+	color:#73a6a6;
+    
+}
+
+
+
+
+
+
+
+#container{ 
+    width: 960px;
+    margin: 20px auto;
+    margin-top:0px;
+    margin-bottom: 0px;
+    position: relative;   
+}
+
+#topnav {  
+    padding:0px;
+    line-height:23px;
+    text-align:right;
+    color:white;
+}
+#topnav a.signin {
+    background:#c74350;
+    padding:4px 6px 6px;
+    text-decoration:none;
+    font-weight:bold;
+    color:white;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    padding:4px 12px 6px;
+}
+#topnav a.signin:hover {
+    background:#ff6937;
+    padding:4px 12px 6px;
+}
+#topnav a.signin, #topnav a.signin:hover {
+    background-position:0 3px!important;
+}
+
+a.signin {
+    position:relative;
+    margin-left:3px;
+}
+a.signin span {
+    background-image:url("../images/toggle_down_light.png");
+    background-repeat:no-repeat;
+    background-position:100% 50%;
+    padding:4px 16px 6px 0;
+}
+#topnav a.menu-open {
+    background:#ddeef6!important;
+    color:#666!important;
+    outline:none;
+}
+#small_signup {
+    display:inline;
+    float:none;
+    line-height:23px;
+    margin:25px 0 0;
+    width:170px;
+}
+a.signin.menu-open span {
+    background-image:url("../images/toggle_up_dark.png");
+    color:#789;
+}
+#signin_menu {
+    -moz-border-radius-topleft:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    display:none;
+    background-color:#ddeef6;
+    position:absolute;
+    width:210px;
+    z-index:100;
+    border:1px transparent;
+    text-align:left;
+    padding:12px;
+    top: 24.5px;
+    right: 0px;
+    margin-top:5px;
+    margin-right: 0px;
+    color:#789;
+    font-size:11px;
+}
+
+#signin_menu input[type=text], #signin_menu input[type=password] {
+    display:block;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border:1px solid #ACE;
+    font-size:13px;
+    margin:0 0 5px;
+    padding:5px;
+    width:203px;
+}
+#signin_menu p {
+    margin:0;
+}
+#signin_menu a {
+    color:#6AC;
+}
+#signin_menu label {
+    font-weight:normal;
+}
+#signin_menu p.remember {
+    padding:10px 0;
+}
+#signin_menu p.forgot, #signin_menu p.complete {
+    clear:both;
+    margin:5px 0;
+}
+#signin_menu p a {
+    color:#27B!important;
+}
+.button {
+    height: 25px;
+    width:100px;
+    margin: 5px 0;
+    background: #c74350 url(http://deverenigdevriendenheusden.be/images2/btn-bg.png);
+    border: 1px solid #95323c;
+    font-family: Arial,Georgia, Serif;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+    
+    -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+    -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #c74350;
+    -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #c74350;
+}
+.button:hover{color: #ff6937; text-shadow: 0px 0px 1 rgba(255, 255, 255, 1);background: #c74350;}
+.ie7 .button {
+    padding: 0 2px;
+}
+
+
+/* ---------------------------------------------------
+    Menu Navigatie
+----------------------------------------------------- */
+
+/* Structure
+------------------------------------------*/
+#coolMenu,
+#coolMenu ul {
+	list-style: none;
+        
+}
+#coolMenu {
+	float: left;
+}
+#coolMenu > li {
+	float: left;
+}
+#coolMenu li a {
+	display: block;
+	height: 4em;
+	line-height: 4em;
+	padding: 0 1.5em;
+	text-decoration: none;
+}
+#coolMenu ul {
+	position: absolute;
+	display: none;
+	z-index: 999;
+}
+#coolMenu ul li a {
+	width: 62px;
+        
+}
+#coolMenu li:hover ul.noJS {
+	display: block; 
+  
+}
+
+
+/* Main menu
+------------------------------------------*/
+#coolMenu {
+        width: 940px;
+	font-family: Arial;
+	font-size: 13px;
+	background: #efefef;
+	margin:0;
+        padding:0;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
+#coolMenu > li > a {
+	color: #fff;
+	font-weight: bold;
+}
+#coolMenu > li:hover > a {
+	background: #c74350;
+	color: white;
+}
+
+
+/* Submenu
+------------------------------------------*/
+#coolMenu ul {
+	background: #c74350;
+	margin:0;
+        padding:0;
+        -webkit-box-shadow: 0 3px 4px rgba(0,0,0,.25);
+        box-shadow: 0 3px 4px rgba(0,0,0,.25);
+}
+#coolMenu ul li a {
+	color: white;
+}
+#coolMenu ul li:hover a {
+	background: #B32F3C;
+}
+/* ---------------------------------------------------
+    Inhoud-container css
+----------------------------------------------------- */
+#content{
+    padding-top:15px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    padding-right:20px;
+    background: white;
+    
+}
+header{
+    display: block;
+}
+
+section{
+    display: table-cell;
+    width: 940px;
+}
+/* ---------------------------------------------------
+    Headers
+----------------------------------------------------- */
+h2 {	
+    font-family: 'Segoe UI',Segoe,Tahoma,sans-serif; 
+    text-align: left;       
+    margin: 0;
+    font-weight: normal;
+    color: #3E3530; 
+    font-size:31px;
+    border-bottom: 1px solid #EBEBEB;	
+}
+
+h3{
+    color: #3E3530; 
+    font-family: 'Segoe UI',Segoe,Tahoma,sans-serif;
+}
+
+/* ---------------------------------------------------
+    Paragraphs
+----------------------------------------------------- */
+p {
+    font-family: "Calibri",Georgia,Serif;
+}
+
+#alert{
+    background: #fff6bf url(http://deverenigdevriendenheusden.be/images/exclamation.png) center no-repeat;
+    background-position: 15px 50%; /* x-pos y-pos */
+    text-align: left;
+    padding: 5px 20px 5px 45px;
+    border-top: 2px solid #ffd324;
+    border-bottom: 2px solid #ffd324;
+}
+.success{
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url(http://deverenigdevriendenheusden.be/images/success.png);
+}
+::selection{
+    background :#c74350;
+    color:#fff;
+}
+
+#datum{
+    color:#3E3530;
+    font-weight:bold;
+    display:inline;
+}
+
+/* ---------------------------------------------------
+    Anchors
+----------------------------------------------------- */
+section a{
+    outline:0;
+    cursor: pointer;
+}
+section a:link,section a:visited{
+    color:#3E3530;
+    font-weight:bold;
+    padding: 0 1px;
+    text-decoration: underline;
+}
+section a:hover,section a:active{
+    font-weight:bold;
+    color: #c74350;
+    text-decoration: none;
+}
+
+section a.title{
+    text-align: left;
+    margin: 0;
+    font-weight: normal;
+    color: #3E3530;
+    font-size:40px;
+    letter-spacing: -2px;
+    border-bottom: 1px solid #B3B3B3;
+}
+section a.title:link,section a.title:visited{
+    text-decoration: none;
+}
+
+section a.title:hover{
+    color: #c74350;
+}
+/* GALLERY PAGER ------------------------------------------------------------*/
+
+.gallery-pager{
+	overflow: hidden;
+	display: block;
+	height: 31px;
+	margin-left: 0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: right;
+        
+}
+
+.gallery-pager li{
+	display: block;
+	width: 25px;
+	height: 31px;
+	float: left;
+	margin-left: 5px;
+        
+}
+
+.gallery-pager li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 3px;
+	font-size: 13px;
+	color: #49494b;
+}
+
+.gallery-pager li:hover,
+.gallery-pager li.active{
+	
+}
+
+
+/* ---------------------------------------------------
+    Footer
+----------------------------------------------------- */
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 940px;
+  position: relative;
+}
+
+.widget-block ul{
+  list-style: none;
+  padding: 0;
+}
+
+/* WIDGET COLS ------------------------------------------------------------*/
+.widget-cols {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  color: white;
+  list-style: none;
+}
+.widget-cols h3 {
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+.widget-cols > li {
+  width: 220px;
+  float: left;
+}
+.widget-cols > li.fourth-col {
+  margin-right: 0px; 
+}
+
+/* SOCIAL BAR ----------------------------------------------------*/
+#social-bar {
+  display: block;
+  float: right;
+}
+
+#social-bar li {
+  display: block;
+  float: left;
+  margin-left: 6px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#social-bar li:hover {
+  -webkit-transform: translate(0px, -5px);
+  -moz-transform: translate(0px, -5px);
+  -o-transform: translate(0px, -5px);
+  transform: translate(0px, -5px);
+}
+/* FOOTER ------------------------------------------------------------*/
+
+footer {
+ line-height: 1.5em; 
+ background: #2d2d2d;
+ margin: auto;
+ font-size: 12px;
+}
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+  color: white;
+  text-shadow: 4px 4px 0 rgba(255, 255, 255, 0.1);
+}
+
+footer a{
+   color:#c74350;
+   text-decoration: none;
+}
+footer a:hover{
+    color:white;
+    text-shadow: 1px 1px 0px #333;
+}
+/* FOOTER BOTTOM ------------------------------------------------------------*/
+
+.footer-bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  
+}
+.footer-bottom .left {
+  width: 50%;
+  padding-top: 10px;
+  padding-left: 40px;
+  float: left;
+  color: white;
+}
+.footer-bottom .right {
+  width: 50%;
+  float: right;
+}
+.footer-bottom a{
+   color: #666;
+   text-decoration: none;
+}
+.footer-bottom a:hover{
+    color:white;
+    text-shadow: 1px 1px 0px #333;
+}
+.jumbotron {
+       font-size: 49px;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }

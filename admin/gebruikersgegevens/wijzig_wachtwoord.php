@@ -52,8 +52,8 @@ $objGebruiker = new User($dbh);
 <?php
 if (isset($_POST['wijzigpaswoord']))
  {  
-   $paswoord = $objGebruiker->test_input($_POST['password']);
-   $paswoord2 = $objGebruiker->test_input($_POST['password2']);
+   $paswoord = $objGebruiker->testInput($_POST['password']);
+   $paswoord2 = $objGebruiker->testInput($_POST['password2']);
    $objGebruiker->wijzigPaswoord($paswoord, $paswoord2); 
  } 
 ?>

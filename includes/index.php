@@ -2,7 +2,7 @@
 require_once 'classes/agenda.class.php';
 require_once 'classes/nieuws.class.php';
 require_once 'classes/gebruikers.class.php';
-$objAgenda = new agenda($dbh);
+$objAgenda = new Agenda($dbh);
 ?>
 
 

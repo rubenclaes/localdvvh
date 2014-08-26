@@ -12,7 +12,7 @@
  *  @author     Ruben Claes
  *  
  */
-class SimpleAuthClass {
+class Authorization {
 
     private $strUsername;
     private $strPassword;
@@ -68,7 +68,7 @@ class SimpleAuthClass {
         unset($_SESSION['userrole']);
     }
 
-    public function Authenticate($intUserRole) {
+    public function authenticate($intUserRole) {
         //controleert of het gaat om een geldige gebruiker en of
         //het gebruikers niveau groter is dan het opgegeven niveau
         if (isset($_SESSION['userrole']) && ($_SESSION['userrole'] >= $intUserRole)) {
@@ -109,5 +109,3 @@ class SimpleAuthClass {
    
 
 }
-
-?>

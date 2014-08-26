@@ -7,7 +7,7 @@ require_once 'gebruikers.class.php';
  *
  * @author Ruben
  */
-class registratie {
+class Registratie {
 
     private $sql;
     private $dbh;
@@ -40,14 +40,14 @@ class registratie {
         $stmt->execute();
     }
 
-    public function test_input($data) {
+    public function testInput($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
     }
 
-    public function controleer_gegevens() {
+    public function controleerGegevens() {
         if (!$this->isValidEmail()) {
             echo '<div class="alert alert-error">Onjuist e-mail adres ingevoerd.</div>';
         } else {

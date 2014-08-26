@@ -61,5 +61,3 @@ if($_POST)
          echo '</body></html>';
      }
 }
-
-?>

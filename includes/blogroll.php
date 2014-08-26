@@ -52,9 +52,9 @@
 
         if (isset($_POST['submit'])) {
             if (($_POST['message'] != NULL)) {
-                $gebruiker = $objReactie->test_input($_SESSION['username']);
-                $tekst = $objReactie->test_input($_POST['message']);
-                $nieuwsID = $objReactie->test_input($_GET['item']);
+                $gebruiker = $objReactie->testInput($_SESSION['username']);
+                $tekst = $objReactie->testInput($_POST['message']);
+                $nieuwsID = $objReactie->testInput($_GET['item']);
                 $objReactie = new Reaction($dbh, $objReactie->getReactieID(), $gebruiker, $tekst, $nieuwsID);
                 $objReactie->insertReaction();
                 $objReactie->lastReaction();
@@ -69,5 +69,5 @@
             $objReactie->tabelComment();
         }
     }
-    ?>
+  
     

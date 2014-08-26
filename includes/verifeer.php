@@ -4,8 +4,8 @@ require_once 'classes/gebruikers.class.php';
 
 if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
     $objGebruiker = new User($dbh);
-    $email = $objGebruiker->test_input($_GET['email']);
-    $hash = $objGebruiker->test_input($_GET['hash']);
+    $email = $objGebruiker->testInput($_GET['email']);
+    $hash = $objGebruiker->testInput($_GET['hash']);
     $gebruiker = new User($dbh, NULL, NULL, NULL, NULL, NULL, NULL, $hash, $email);
     $gebruikersOpEmailHash = $gebruiker->getGebruikersOpEmailHash();
     

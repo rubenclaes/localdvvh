@@ -108,3 +108,4 @@ foreach($arrMenuItems as $strMenuItem => $strKey) {
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar inverse -->
       </div> <!-- /.container -->
+      

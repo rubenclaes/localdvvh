@@ -24,7 +24,8 @@
             if (file_exists('fotoalbums/' . $_POST['fotoalbum'] . '/' . $_FILES["file"]["name"])) {
                 echo '<p>bestand bestaat al!</p>';
             } else {
-                for ($x = 0; $x < count($_FILES["file"]["name"]); $x++) {
+                $aantalBestanden = count($_FILES["file"]["name"]);
+                for ($x = 0; $x < $aantalBestanden; $x++) {
                     $name = $_FILES["file"]["name"][$x];
                     $tmp_name = $_FILES["file"]["tmp_name"][$x];
 

@@ -25,10 +25,9 @@ session_start(); //werken met sessies voor de authenticatie
  * */
 include_once 'config/compression_inc.php';
 require_once 'classes/database.class.php';
-require_once 'classes/SimpleAuthClass.php';
+require_once 'classes/authorisatie.class.php';
 
 $dbh = Database::getConnection();
-$objAuthentication = new SimpleAuthClass($dbh);
 
 require_once 'config/menuConfig.php';
 require_once 'config/headConfig.php';
@@ -40,6 +39,7 @@ include 'templates/basistemplate/htmlMenu_inc.php';
 echo '<!-- Begin paginacontent -->'
 . '<div class="container">';
 
+$objAuthentication = new Authorization($dbh);
 
 /*
  * Laadt de paginacontent van de gevraagde pagina in
@@ -49,10 +49,13 @@ if (isset($_GET['page'])) {
     if (!array_key_exists($strPage, $arrMenuItems)) {
         $strPage = "404";        
         include $arrMenuItems[$strPage]["page_content"];
-    } elseif (($arrMenuItems[$strPage]['page_access'] == 0) ||  $objAuthentication->authenticate($arrMenuItems[$strPage]['page_access'])) {
-        include $arrMenuItems[$strPage]["page_content"];
-    } else {
-        include 'includes/noaccess.php';
+    } else{
+        $rol = $arrMenuItems[$strPage]['page_access'];
+        if (($arrMenuItems[$strPage]['page_access'] == 0) ||  $objAuthentication->authenticate($rol)) {
+            include $arrMenuItems[$strPage]["page_content"];
+        } else {
+            include 'includes/noaccess.php';
+        }     
     }
 } else {
     $strPage = "index";

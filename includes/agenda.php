@@ -1,6 +1,6 @@
 <?php
 require_once 'classes/agenda.class.php';
-$objAgenda = new agenda($dbh);
+$objAgenda = new Agenda($dbh);
 ?>
     <div class="hero-unit">
          <h1>Jaarprogramma <?php echo date('Y'); ?> </h1>

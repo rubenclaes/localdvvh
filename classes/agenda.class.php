@@ -1,6 +1,6 @@
 <?php
 
-class agenda {
+class Agenda {
 
     private $sql;
     private $dbh;

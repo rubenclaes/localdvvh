@@ -1,7 +1,7 @@
 <?php
 require_once 'classes/registratie.class.php';
 require_once 'classes/gebruikers.class.php';
-$objRegistratie = new registratie($dbh);
+$objRegistratie = new Registratie($dbh);
 ?>
 <div class="hero-unit">
     <h1>Registratie</h1>
@@ -79,15 +79,15 @@ $objRegistratie = new registratie($dbh);
             AND isset($_POST['code1']) && !empty($_POST['code1'])
             AND isset($_POST['code2']) && !empty($_POST['code2'])) {
 
-        $gebruikersnaam = $objRegistratie->test_input($_POST['username']);
-        $email = $objRegistratie->test_input($_POST['email']);
-        $paswoord = $objRegistratie->test_input($_POST['password']);
-        $herhalingpaswoord = $objRegistratie->test_input($_POST['password2']);
-        $code1 = $objRegistratie->test_input($_POST['code1']);
-        $code2 = $objRegistratie->test_input($_POST['code2']);
+        $gebruikersnaam = $objRegistratie->testInput($_POST['username']);
+        $email = $objRegistratie->testInput($_POST['email']);
+        $paswoord = $objRegistratie->testInput($_POST['password']);
+        $herhalingpaswoord = $objRegistratie->testInput($_POST['password2']);
+        $code1 = $objRegistratie->testInput($_POST['code1']);
+        $code2 = $objRegistratie->testInput($_POST['code2']);
 
-        $objRegistratie = new registratie($dbh, $gebruikersnaam, $email, $paswoord, $herhalingpaswoord, $code1, $code2);
-        if ($objRegistratie->controleer_gegevens()) {
+        $objRegistratie = new Registratie($dbh, $gebruikersnaam, $email, $paswoord, $herhalingpaswoord, $code1, $code2);
+        if ($objRegistratie->controleerGegevens()) {
             $hash = md5(rand(0, 1000));
             $objGebruiker = new User($dbh, NULL, $gebruikersnaam, $paswoord, NULL, NULL, NULL, $hash, $email);
             $objGebruiker->addGebruiker();

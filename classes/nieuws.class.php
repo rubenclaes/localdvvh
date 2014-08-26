@@ -186,11 +186,11 @@ class News {
         $stmt = $this->dbh->prepare($this->sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
         $stmt->execute();
         $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//        $Cc = array();
-//        foreach ($row as $value) {
-//            array_push($Cc, $value['email']);
-//        }
-        $Cc = "rubenclaes@outlook.com";
+        $Cc = array();
+        foreach ($row as $value) {
+            array_push($Cc, $value['email']);
+        }
+        
         $to = "info@deverenigdevriendenheusden.be";
         $subject = $this->onderwerp;
         $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

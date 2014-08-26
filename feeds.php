@@ -3,7 +3,7 @@ header("Content-Type: application/rss+xml; charset=ISO-8859-1");
 require_once 'classes/xml.class.php';
 require_once 'classes/database.class.php';
 $dbh = database::getConnection();
-$objXML = new xml($dbh);
+$objXML = new Xml($dbh);
 ?>
 
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">

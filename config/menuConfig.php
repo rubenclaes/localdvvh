@@ -314,4 +314,3 @@ $arrArchivesItems=array(
                 'nummer'=>12,
                 ),    
 );
-?>

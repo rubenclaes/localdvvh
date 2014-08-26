@@ -5,7 +5,7 @@
  *
  * @author Ruben
  */
-class xml {
+class Xml {
     private $sql;
     private $dbh;
     
@@ -20,8 +20,9 @@ class xml {
             $stmt->execute();
 
             $arr_gegevens = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $aantalGegevens = count($arr_gegevens);
             
-             for ($i=0;$i<count($arr_gegevens);$i++) {
+             for ($i=0;$i<$aantalGegevens;$i++) {
                   echo '<item>  
                            <title> '. $arr_gegevens[$i]['onderwerp'] . '</title>
                            <description>' . $arr_gegevens[$i]['artikel'] . '</description>
@@ -33,4 +34,3 @@ class xml {
             }
         }
 }
-?>

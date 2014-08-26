@@ -13,7 +13,7 @@ echo '<div class="hero-unit">
         </ul>
        ';
 
-$objAgenda = new agenda($dbh);
+$objAgenda = new Agenda($dbh);
 $objAgenda->tabelAgenda();
 $objAgenda->overzichtAgenda();
 

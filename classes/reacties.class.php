@@ -177,7 +177,7 @@ class Reaction {
         </form>';
     }
 
-    public function test_input($data) {
+    public function testInput($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);

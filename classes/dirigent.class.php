@@ -11,7 +11,7 @@
  *
  * @author Ruben
  */
-class dirigent {
+class Dirigent {
     private $sql;
     private $dbh;
     private $tekst;
@@ -23,7 +23,7 @@ class dirigent {
            $this->afbeelding = $afbeelding;
     }
     
-    public function insert_dirigent()
+    public function insertDirigent()
     {        
         $this->sql = "INSERT INTO dirigent (tekst, afbeelding) VALUES (:tekst, :afbeelding)";
         $stmt = $this->dbh->prepare($this->sql);
@@ -36,7 +36,7 @@ class dirigent {
         }
     }
     
-    public function test_input($data) {
+    public function testInput($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);

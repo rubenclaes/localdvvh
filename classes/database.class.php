@@ -22,7 +22,7 @@ class Database {
             return self::$dbh;
         } catch (PDOException $e) {
             $e->getMessage();
-            die("A database error was encountered -> " . $e->getMessage() );
+            echo "A database error was encountered -> " . $e->getMessage();
         }
     }
 

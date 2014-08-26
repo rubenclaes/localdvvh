@@ -6,7 +6,7 @@
             $sAcceptEncoding = $_SERVER['HTTP_ACCEPT_ENCODING'];
             $sAcceptEncoding = strtolower($sAcceptEncoding);
             if(strpos($sAcceptEncoding, 'gzip') 
-            or strpos($sAcceptEncoding, 'deflate')){
+            || strpos($sAcceptEncoding, 'deflate')){
                 ob_start('ob_gzhandler');
             }
             unset($sAcceptEncoding);

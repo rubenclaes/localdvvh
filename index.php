@@ -11,13 +11,8 @@
  * Dit is een template voor de site van Harmonie De Verenigde Vrienden Heusden-Zolder
  */
 
-/**
- * error reporting on
- */
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(-1);
-
+// Report all PHP errors (see changelog)
+error_reporting(E_ALL);
 session_start(); //werken met sessies voor de authenticatie
 
 /**

@@ -184,7 +184,7 @@ class User {
             $allowedExts = array("jpg", "jpeg", "gif", "png");
             $extension = end(explode(".", $_FILES["file"]["name"]));
             $ext = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
-            $bestandsnaam = $_FILES["file"]["name"];
+            
             if ((($_FILES["file"]["type"] == "image/gif") || ($_FILES["file"]["type"] == "image/jpeg") || ($_FILES["file"]["type"] == "image/png")) && ($_FILES["file"]["size"] < 100000) && in_array($extension, $allowedExts)) {
                 if ($_FILES["file"]["error"] > 0) {
                     echo "Return Code: " . $_FILES["file"]["error"] . "<br />";
@@ -212,7 +212,7 @@ class User {
             $allowedExts = array("jpg", "jpeg", "gif", "png");
             $extension = end(explode(".", $_FILES["file"]["name"]));
             $ext = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
-            $bestandsnaam = $_FILES["file"]["name"];
+         
             if ((($_FILES["file"]["type"] == "image/gif") || ($_FILES["file"]["type"] == "image/jpeg") || ($_FILES["file"]["type"] == "image/png")) && ($_FILES["file"]["size"] < 50000) && in_array($extension, $allowedExts)) {
                 if ($_FILES["file"]["error"] > 0) {
                     echo "Return Code: " . $_FILES["file"]["error"] . "<br />";

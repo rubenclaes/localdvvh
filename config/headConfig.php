@@ -14,7 +14,7 @@
  */
 $strMetaTags = '
             <meta charset="utf-8"> 
-            <link rel="shortcut icon" type="image/ico" href="http://deverenigdevriendenheusden.be/images/favicon.ico" />
+            <link rel="shortcut icon" type="image/ico" href="http://deverenigdevriendenheusden.be/favicon.ico" />
             <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
             <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0">

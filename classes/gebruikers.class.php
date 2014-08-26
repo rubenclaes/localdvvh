@@ -105,8 +105,10 @@ class User {
 
     public function getGebruikersOpEmailHash() {
         if($this->gebruikersOpEmailHash == NULL) { // caching
-            $this->sql = "SELECT email, hash, active FROM namen WHERE email='".  $this->email."' AND hash='".  $this->hash."' AND active='0'";
+            $this->sql = "SELECT email, hash, active FROM namen WHERE email=:email AND hash=:hash AND active='0'";
             $stmt = $this->dbh->prepare($this->sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+            $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
+            $stmt->bindParam(':hash', $this->hash, PDO::PARAM_INT);
             $stmt->execute();
             $this->gebruikersRecords = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $this->gebruikersRecords;

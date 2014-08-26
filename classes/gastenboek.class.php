@@ -29,10 +29,6 @@ class Guestbook
         $result = $this->dbh->query($this->sql);
         $result->setFetchMode(PDO::FETCH_OBJ);
                 
-        if ($result == false)
-        {
-            die(mysql_error());
-        }
         
         while ($row = $result->fetch(PDO::FETCH_NUM))
         {
